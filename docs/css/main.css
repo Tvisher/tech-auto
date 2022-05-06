@@ -1611,6 +1611,7 @@ section:not(:first-child) {
   align-items: center;
   justify-content: flex-start;
   padding: 5px 0;
+  position: relative;
 }
 
 .services__list .list-item .list-item__link::after {
@@ -1623,6 +1624,21 @@ section:not(:first-child) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.services__list .list-item .list-item__link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #F32F2F;
+  transition: width 0.3s ease-in-out;
+}
+
+.services__list .list-item .list-item__link:hover::before {
+  width: 100%;
 }
 
 .services__list .list-item:hover .list-item__image {
