@@ -1,0 +1,54 @@
+.btn {
+  font-size: 16px;
+  font-family: $mainFont;
+  font-weight: 400;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 48px;
+  line-height: 120%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  will-change: auto;
+  transition:
+    color .3s ease,
+    background-color .3s ease,
+    transform .3s ease,
+    border-color .3s ease;
+
+
+  &:active {
+    transform: translate3d(0, 2px, 0);
+  }
+}
+
+.primaryBtn {
+  background-color: $brand-primary;
+  color: $brand-black;
+}
+
+.redBtn {
+  background-color: $brand-red;
+  color: #fff;
+}
+
+.blueBtn {
+  background-color: $brand-blue;
+  color: #fff;
+}
+
+
+
+.ghostBtn {
+  background-color: transparent;
+  color: $brand-primary;
+  border-color: $brand-primary;
+}
+
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}

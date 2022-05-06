@@ -1,0 +1,35 @@
+// Size
+$mainFontSize: 18px;
+$mainFontWeight: 400;
+$mainLineHeight: 120%;
+
+$desktopWidth: 1330px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 380px;
+
+// Main color
+$brand-black: #1E2023;
+$brand-primary:#DDCFC6;
+$brand-gray:#59677E;
+$brand-white:#FFFFFF;
+$brand-red:#F32F2F;
+$brand-blue: #312755;
+
+// Font
+$mainFont: "OpenSans";
+$mainFontColor: $brand-gray;
+
+
+@mixin pruning($c) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: $c;
+    -webkit-box-orient: vertical;
+    line-clamp: $c;
+    box-orient: vertical;
+}
