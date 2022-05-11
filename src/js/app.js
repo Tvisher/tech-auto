@@ -132,11 +132,8 @@ document.body.addEventListener('click', (e) => {
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
-        document.querySelector('[data-header-menu]').classList.toggle('active');
+        document.querySelector('[data-mobile-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
-    }
-    if (target.closest('.fullscreen-slider__desc')) {
-        target.closest('.fullscreen-slider__desc').classList.add('open');
     }
 });
 
