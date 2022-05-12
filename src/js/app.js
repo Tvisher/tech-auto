@@ -193,3 +193,14 @@ headerFix();
 
 
 
+// Отрисовка карты секции о нас
+const paintingMap = document.querySelector('.painting-map-element');
+if (paintingMap) {
+    window.addEventListener('scroll', animateMap);
+    function animateMap(e) {
+        if (paintingMap.getBoundingClientRect().top - window.innerHeight < 0) {
+            paintingMap.classList.add('active');
+            window.removeEventListener('scroll', animateMap);
+        }
+    }
+}
