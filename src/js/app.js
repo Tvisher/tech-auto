@@ -87,9 +87,9 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
             currentSlide = currentSlide.length < 2 ? `0${currentSlide}` : currentSlide;
             currentSlideNum.textContent = currentSlide;
         },
-        slideChange(e) {
-            let sliderSpeed = e.params.speed;
-            let diagramSpiner = e.$el[0].querySelector('.slider-timer');
+        slideChange(swiper) {
+            let sliderSpeed = swiper.params.speed;
+            let diagramSpiner = swiper.$el[0].querySelector('.slider-timer');
             diagramSpiner.classList.remove('start');
             setTimeout(() => {
                 diagramSpiner.classList.add('start');
@@ -101,6 +101,40 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
             autoHeight: false,
         }
     }
+});
+
+const comboSlider = new Swiper('.combo-section__slider', {
+    modules: [EffectFade, Autoplay, Navigation],
+    speed: 800,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    // loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 6000,
+    },
+    on: {
+        resize(swiper) {
+            swiper.update();
+        },
+        init(swiper) {
+            let animationTime = swiper.params.autoplay.delay / 1000;
+            let diagramSpiner = swiper.$el[0].closest('section').querySelector('.slider-timer');
+            diagramSpiner.querySelector('.slider-timer-path').style.animationDuration = `${animationTime}s`;
+            diagramSpiner.classList.add('start');
+        },
+        slideChange(swiper) {
+            let sliderSpeed = swiper.params.speed;
+            let diagramSpiner = swiper.$el[0].closest('section').querySelector('.slider-timer');
+            diagramSpiner.classList.remove('start');
+            setTimeout(() => {
+                diagramSpiner.classList.add('start');
+            }, sliderSpeed);
+        }
+    },
 });
 
 window.addEventListener('load', (e) => {
