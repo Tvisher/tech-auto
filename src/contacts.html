@@ -1,0 +1,31 @@
+@@include('./html/header.html')
+<main>
+    @@include('./html/contacts.html')
+    <section class="map-section">
+        <div class="map-section__image">
+            <img src="@img/map-image.jpg" alt="">
+        </div>
+        <div class="contacts-block-wrapper">
+            <div class="container">
+                <div class="contacts-block">
+                    <h3 class="contacts-block__title">Контакты</h3>
+                    <div class="contacts-block__item">
+                        <div class="contacts-block__nameplate">Юридическое название</div>
+                        <span class="contacts-block__link">Группа компаний «ТЕХАВТО»</span>
+                    </div>
+                    <div class="contacts-block__item">
+                        <div class="contacts-block__nameplate">Юридический адрес</div>
+                        <span class="contacts-block__link">070010, Казахстан, г. Усть-Каменогорск
+                            ул. Маяковского, 14</span>
+                    </div>
+                    <div class="contacts-block__item">
+                        <div class="contacts-block__nameplate">Телефоны</div>
+                        <a href="tel:+77009007777" class="contacts-block__link">+7 (700) 900-77-77</a>
+                        <a href="tel:+77232919518" class="contacts-block__link">+7 (7232) 91-95-18</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./html/footer.html')

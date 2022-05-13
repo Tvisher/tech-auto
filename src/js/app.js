@@ -74,6 +74,9 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
         },
         init(swiper) {
             let clidesCount = String(swiper.slides.length);
+            if (clidesCount < 2) {
+                return;
+            }
             clidesCount = clidesCount.length < 2 ? `0${clidesCount}` : clidesCount;
             generalSlidesCount.textContent = clidesCount;
 

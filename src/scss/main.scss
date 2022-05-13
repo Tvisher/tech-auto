@@ -47,7 +47,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   opacity: 0;
 
   &.hidden {
@@ -88,7 +88,6 @@ li {
   color: $brand-black;
 }
 
-
 .container {
   width: 100%;
   flex: 0 0 auto;
@@ -114,7 +113,7 @@ li {
   }
 
   &.small {
-    max-width: 936px
+    max-width: 936px;
   }
 }
 
@@ -126,7 +125,6 @@ li {
   line-height: 1.2;
   color: $brand-black;
   margin-bottom: 30px;
-
 }
 
 .middle-title {
@@ -136,21 +134,19 @@ li {
   color: $brand-black;
 }
 
-
 .header {
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   z-index: 999;
-  transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &.fill {
     box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
     background-color: #fff;
   }
 }
-
 
 .header__wrapper {
   display: flex;
@@ -196,9 +192,6 @@ li {
   }
 }
 
-
-
-
 .header__phone {
   display: flex;
   flex-direction: column;
@@ -208,14 +201,14 @@ li {
   &::before {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     position: absolute;
-    content: '';
+    content: "";
     right: -8px;
     top: 50%;
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background: #EDEDED;
+    background: #ededed;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.70742 1.23599C9.61455 1.14306 9.50428 1.06935 9.38292 1.01905C9.26155 0.968758 9.13146 0.942871 9.00008 0.942871C8.86871 0.942871 8.73862 0.968758 8.61725 1.01905C8.49589 1.06935 8.38562 1.14306 8.29275 1.23599L5.23542 4.29266C5.17291 4.35515 5.08814 4.39025 4.99975 4.39025C4.91136 4.39025 4.82659 4.35515 4.76408 4.29266L1.70742 1.23599C1.51991 1.04839 1.26556 0.942969 1.00032 0.942906C0.735081 0.942844 0.480681 1.04815 0.293084 1.23566C0.105488 1.42317 6.25419e-05 1.67752 2.78174e-08 1.94276C-6.24863e-05 2.20799 0.105243 2.46239 0.292751 2.64999L3.35008 5.70732C3.56676 5.92402 3.82399 6.09591 4.1071 6.21319C4.39021 6.33046 4.69365 6.39083 5.00008 6.39083C5.30652 6.39083 5.60996 6.33046 5.89307 6.21319C6.17618 6.09591 6.43341 5.92402 6.65008 5.70732L9.70742 2.64999C9.89489 2.46246 10.0002 2.20816 10.0002 1.94299C10.0002 1.67783 9.89489 1.42352 9.70742 1.23599Z' fill='%231E2023'/%3e%3c/svg%3e ");
     background-repeat: no-repeat;
     background-position: center;
@@ -229,7 +222,6 @@ li {
   //   }
   // }
 }
-
 
 .phones.with_dropdown {
   position: relative;
@@ -249,8 +241,6 @@ li {
     font-size: 12px;
     color: $brand-gray;
   }
-
-
 }
 
 .phones.with_dropdown .dropdown__phones {
@@ -287,7 +277,6 @@ li {
   visibility: visible;
 }
 
-
 .bg-video-container {
   width: 100%;
   height: 0;
@@ -296,6 +285,16 @@ li {
   top: 0;
   padding-top: 100vh;
   z-index: -1;
+
+  &._image {
+    // padding-top: 46%;
+    padding-top: 0;
+    height: 700px;
+
+    img {
+      object-position: 60%;
+    }
+  }
 
   .bg-video-wrapper {
     position: absolute;
@@ -306,8 +305,8 @@ li {
     overflow: hidden;
     opacity: 0.3;
 
-
-    video {
+    video,
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -315,12 +314,10 @@ li {
   }
 }
 
-
 section {
   &:not(:first-child) {
     padding: 75px 0;
   }
-
 }
 
 .video-section {
@@ -333,6 +330,12 @@ section {
 
   .swiper-slide .container {
     height: 100%;
+  }
+
+  &.no-swiper {
+    .swiper-slide__content {
+      max-width: 960px;
+    }
   }
 }
 
@@ -349,7 +352,6 @@ section {
 .fullscreen-slider__footer {
   margin-top: auto;
   width: 100%;
-
 }
 
 .fullscreen-slider__footer-content {
@@ -369,7 +371,7 @@ section {
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 0;
     bottom: 0;
@@ -387,7 +389,7 @@ section {
 
       &::after {
         margin-left: 12px;
-        content: '';
+        content: "";
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_10_80)'%3e%3cpath d='M14.3518 7.6569L14.3518 3.96203C14.3375 3.34768 14.087 2.76247 13.6525 2.32794C13.2179 1.89341 12.6327 1.64295 12.0184 1.62858L8.32351 1.62858C8.05827 1.62851 7.80387 1.73382 7.61627 1.92133C7.42867 2.10884 7.32325 2.36319 7.32319 2.62843C7.32312 2.89366 7.42843 3.14806 7.61594 3.33566C7.80345 3.52326 8.0578 3.62868 8.32304 3.62875L10.9445 3.62922L2.35223 12.2432C2.16469 12.4307 2.05934 12.6851 2.05934 12.9503C2.05934 13.2155 2.16469 13.4699 2.35223 13.6574C2.53977 13.8449 2.79412 13.9503 3.05934 13.9503C3.32455 13.9503 3.57891 13.8449 3.76644 13.6574L12.3498 5.05239L12.3517 7.65737C12.3562 7.91954 12.4636 8.16943 12.6506 8.35322C12.8376 8.53701 13.0893 8.63999 13.3515 8.63999C13.6137 8.63999 13.8654 8.53701 14.0524 8.35322C14.2395 8.16943 14.3468 7.91954 14.3514 7.65737L14.3518 7.6569Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_10_80'%3e%3crect width='16' height='16' fill='white' transform='translate(-3.3335 8) rotate(-45)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
         background-repeat: no-repeat;
         display: block;
@@ -415,6 +417,7 @@ section {
   .slide-descr {
     font-size: 24px;
     margin-bottom: 60px;
+    line-height: 120%;
   }
 }
 
@@ -430,7 +433,7 @@ section {
   .swiper-button-prev,
   .swiper-button-next {
     svg {
-      transition: transform .3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
 
       path {
         fill: $brand-red;
@@ -470,7 +473,6 @@ section {
   bottom: 30px;
 }
 
-
 .slider-timer-nav .swiper-button-prev,
 .slider-timer-nav .swiper-button-next {
   top: 0;
@@ -501,7 +503,6 @@ section {
   z-index: 2;
   opacity: 0;
 
-
   svg {
     width: 47px;
     height: 47px;
@@ -530,14 +531,13 @@ section {
   display: flex;
   font-weight: 700;
   align-items: flex-end;
-  color: #1E2023;
+  color: #1e2023;
   line-height: 100%;
   font-size: 36px;
 
   .general-slides-count {
     line-height: 100%;
     font-size: 36px;
-
   }
 
   .current-slide-num {
@@ -547,10 +547,31 @@ section {
   }
 }
 
+.advantages {
+  &.no-rotate {
+    background-color: #fff;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    .list-item__rotate {
+      writing-mode: inherit;
+      transform: none;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .list-item__info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
 .advantages__list {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 
   .list-item {
@@ -558,7 +579,7 @@ section {
 
     .list-item__num {
       font-size: 72px;
-      font-weight: 700;
+      font-weight: 800;
       color: $brand-red;
       line-height: 100%;
       margin-bottom: 20px;
@@ -587,10 +608,37 @@ section {
 .map-bg {
   padding-top: 50px;
   margin-top: 100px;
-  background-image: url('../img/map-mask.svg');
+  background-image: url("../img/map-mask.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+
+  &.full {
+    background-size: 110%;
+    background-position: center;
+    margin-top: 0px;
+    padding-top: 0px;
+
+    .advantages {
+      padding-bottom: 150px;
+      padding-top: 150px;
+    }
+
+    .list-item__descr {
+      font-style: italic;
+    }
+
+    .list-item-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .black-text {
+    color: $brand-black;
+    margin-top: 20px;
+  }
 }
 
 .scroll-action {
@@ -709,7 +757,7 @@ section {
 
       &::after {
         margin-left: 12px;
-        content: '';
+        content: "";
         width: 18px;
         height: 18px;
         display: block;
@@ -721,13 +769,13 @@ section {
 
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         left: 0;
         bottom: 0;
         height: 2px;
         width: 0;
         background-color: $brand-red;
-        transition: width .3s ease-in-out;
+        transition: width 0.3s ease-in-out;
       }
 
       &:hover {
@@ -746,7 +794,7 @@ section {
 
   .list-item__image {
     opacity: 0.3;
-    transition: opacity .4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
     z-index: 1;
     position: absolute;
     right: 0;
@@ -775,8 +823,8 @@ section {
     width: 48%;
     padding: 14px 16px;
     border-radius: 4px;
-    border: 1px solid #59677E;
-    transition: box-shadow .3s ease-in-out;
+    border: 1px solid #59677e;
+    transition: box-shadow 0.3s ease-in-out;
 
     &:first-child {
       margin-right: 4%;
@@ -796,7 +844,7 @@ section {
   justify-content: flex-start;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 32px;
     height: 32px;
@@ -833,7 +881,7 @@ section {
 .contacts-block {
   margin-top: 60px;
   max-width: 520px;
-  background-color: #1E2023;
+  background-color: #1e2023;
   padding: 60px;
 
   .contacts-block__title {
@@ -887,7 +935,7 @@ section {
 
 .footer {
   padding: 25px 0;
-  background-color: #1A1B1D;
+  background-color: #1a1b1d;
 }
 
 .footer__nav-list a {
@@ -922,8 +970,7 @@ section {
   overflow: auto;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out,
-  visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   padding-top: 100px;
   z-index: 999;
   position: fixed;
@@ -982,9 +1029,7 @@ section {
   }
 }
 
-
 @media (max-width: 1080px) {
-
   .footer__nav {
     flex: 0 0 100%;
     order: 10;
@@ -1040,7 +1085,7 @@ section {
       width: 100%;
       height: 3px;
       border-radius: 2px;
-      transition: transform .3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     &.active {
@@ -1173,8 +1218,6 @@ section {
   .footer__nav-list a {
     padding-left: 0;
   }
-
-
 }
 
 @media (max-width: 576px) {
@@ -1257,7 +1300,7 @@ section {
 
     &:hover {
       .list-item__image {
-        opacity: .3;
+        opacity: 0.3;
       }
     }
   }
@@ -1289,13 +1332,11 @@ section {
 }
 
 @media (max-width: 380px) {
-
   .contacts-block {
     width: calc(100% + 20px);
     margin-left: -10px;
   }
 }
-
 
 .about-section {
   padding-top: 175px;
@@ -1310,15 +1351,14 @@ section {
 
   &:before {
     position: absolute;
-    content: '';
+    content: "";
     right: 0;
     bottom: 0;
-    background-image: url('../img/ball.png');
+    background-image: url("../img/ball.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     width: 1205px;
     height: 1205px;
-
   }
 
   .container {
@@ -1339,7 +1379,7 @@ section {
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 100vw;
       background-color: #fff;
       left: 150px;
@@ -1401,7 +1441,7 @@ section.clients {
       }
 
       padding: 12px;
-      background: #F0F0F0;
+      background: #f0f0f0;
       height: 100px;
       flex: 1 0 calc(25% - 30px);
       overflow: hidden;
@@ -1443,7 +1483,7 @@ section.our-mission {
       width: 140px;
       position: absolute;
       top: 0;
-      content: '';
+      content: "";
       height: 111px;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='142' height='113' viewBox='0 0 142 113' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M55.5194 103.872L55.5194 103.872L55.5261 103.865C61.5061 97.8828 64.4837 90.1319 64.4837 80.6588C64.4837 74.049 62.941 68.294 59.8368 63.414C56.8095 58.655 52.6205 55.059 47.2841 52.6281L61.5285 1.1333L61.7037 0.5H61.0466H28.7389H28.4012L28.2751 0.813259L9.34914 47.8206C5.65007 56.5281 3.24431 63.0863 2.14662 67.4788C1.04922 71.8701 0.5 76.2638 0.5 80.6588C0.5 89.918 3.47988 97.5587 9.45757 103.539L9.45751 103.539L9.46405 103.545C15.6568 109.519 23.3993 112.5 32.655 112.5C41.905 112.5 49.5406 109.632 55.5194 103.872ZM132.536 103.872L132.542 103.865C138.522 97.8828 141.5 90.1319 141.5 80.6588C141.5 74.049 139.957 68.294 136.853 63.414C133.826 58.655 129.637 55.059 124.3 52.6281L138.545 1.1333L138.72 0.5H138.063H105.755H105.418L105.291 0.813259L86.3673 47.8163C86.3666 47.8178 86.366 47.8194 86.3653 47.8209C82.6663 56.5282 80.2606 63.0863 79.1629 67.4788C78.0655 71.8701 77.5163 76.2638 77.5163 80.6588C77.5163 89.918 80.4962 97.5587 86.4739 103.539L86.4738 103.539L86.4804 103.545C92.6731 109.519 100.416 112.5 109.671 112.5C118.921 112.5 126.557 109.632 132.536 103.872Z' stroke='%23F32F2F'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
@@ -1497,12 +1537,12 @@ section.combo-section {
   .slide-item {
     width: 263px;
     height: 276px;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     position: relative;
     overflow: hidden;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       width: 250px;
       height: 250px;
@@ -1522,7 +1562,7 @@ section.combo-section {
       .slide-item__name,
       .slide-item__descr {
         opacity: 1;
-        transition: opacity .3s ease-in-out .3s;
+        transition: opacity 0.3s ease-in-out 0.3s;
       }
     }
   }
@@ -1538,7 +1578,7 @@ section.combo-section {
     height: 100%;
     width: 100%;
     background: $brand-blue;
-    transition: transform .5s ease-in-out, border-radius .5s ease-in-out .2s;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out 0.2s;
     padding: 40px 20px;
     color: #fff;
     transform: translate3d(20%, 100%, 0);
@@ -1549,7 +1589,7 @@ section.combo-section {
       position: absolute;
       right: 20px;
       bottom: 25px;
-      content: '';
+      content: "";
       width: 24px;
       height: 14px;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='14' viewBox='0 0 24 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.1218 13.3941L23.0408 9.47514C23.6772 8.80828 24.0322 7.92191 24.0322 7.00013C24.0322 6.07835 23.6772 5.19199 23.0408 4.52513L19.1218 0.606131C18.8405 0.324736 18.459 0.166598 18.0611 0.166504C17.6633 0.16641 17.2817 0.324369 17.0003 0.605632C16.7189 0.886894 16.5608 1.26842 16.5607 1.66628C16.5606 2.06414 16.7185 2.44574 16.9998 2.72713L19.7798 5.50813L1.52979 5.53113C1.13196 5.53113 0.75043 5.68917 0.469125 5.97047C0.18782 6.25178 0.0297852 6.63331 0.0297852 7.03113C0.0297852 7.42896 0.18782 7.81049 0.469125 8.0918C0.75043 8.3731 1.13196 8.53114 1.52979 8.53114L19.7608 8.50814L16.9998 11.2731C16.7265 11.556 16.5754 11.9349 16.5788 12.3282C16.5822 12.7215 16.7399 13.0978 17.0181 13.3759C17.2962 13.654 17.6724 13.8117 18.0657 13.8152C18.459 13.8186 18.8379 13.6674 19.1208 13.3941H19.1218Z' fill='white'/%3e%3c/svg%3e ");
@@ -1573,7 +1613,7 @@ section.combo-section {
   .slide-item__name,
   .slide-item__descr {
     opacity: 0;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .slide-item__image {
@@ -1657,7 +1697,7 @@ section.contacts-section {
       margin-bottom: 10px;
       padding: 14px 16px;
       font-size: 14px;
-      border: 1px solid #9B9B9B;
+      border: 1px solid #9b9b9b;
       border-radius: 4px;
     }
   }
@@ -1671,386 +1711,332 @@ section.contacts-section {
   }
 }
 
-.painting-map__wrapper {
-  /***************************************************
- * Generated by SVG Artista on 5/12/2022, 3:47:12 PM
+/***************************************************
+ * Generated by SVG Artista on 5/13/2022, 11:29:30 AM
  * MIT license (https://opensource.org/licenses/MIT)
  * W. https://svgartista.net
  **************************************************/
 
-  svg .paint-map-1 {
-    stroke-dashoffset: 5242px;
-    stroke-dasharray: 5242px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
-  }
+svg .svg-elem-1 {
+  stroke-dashoffset: 1638.1466064453125px;
+  stroke-dasharray: 1638.1466064453125px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0s, fill 0.4s ease-in-out 0.8s;
+  transition: stroke-dashoffset 3s ease 0s, fill 0.4s ease-in-out 0.8s;
+}
 
-  svg.active .paint-map-1 {
-    stroke-dashoffset: 10484px;
-    fill: rgb(255, 254, 254);
-  }
+svg.active .svg-elem-1 {
+  stroke-dashoffset: 3276.293212890625px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-2 {
-    stroke-dashoffset: 3913.270751953125px;
-    stroke-dasharray: 3913.270751953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
-  }
+svg .svg-elem-2 {
+  stroke-dashoffset: 1638.1466064453125px;
+  stroke-dasharray: 1638.1466064453125px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.12s,
+    fill 0.4s ease-in-out 0.9s;
+  transition: stroke-dashoffset 3s ease 0.12s, fill 0.4s ease-in-out 0.9s;
+}
 
-  svg.active .paint-map-2 {
-    stroke-dashoffset: 7826.54150390625px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-2 {
+  stroke-dashoffset: 3276.293212890625px;
+  fill: rgb(196, 196, 196);
+}
 
-  svg .paint-map-3 {
-    stroke-dashoffset: 3913.270751953125px;
-    stroke-dasharray: 3913.270751953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
-  }
+svg .svg-elem-3 {
+  stroke-dashoffset: 2100.767822265625px;
+  stroke-dasharray: 2100.767822265625px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.24s, fill 0.4s ease-in-out 1s;
+  transition: stroke-dashoffset 3s ease 0.24s, fill 0.4s ease-in-out 1s;
+}
 
-  svg.active .paint-map-3 {
-    stroke-dashoffset: 7826.54150390625px;
-    fill: rgb(225, 225, 225);
-  }
+svg.active .svg-elem-3 {
+  stroke-dashoffset: 4201.53564453125px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-4 {
-    stroke-dashoffset: 2100.755126953125px;
-    stroke-dasharray: 2100.755126953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
-  }
+svg .svg-elem-4 {
+  stroke-dashoffset: 2100.767822265625px;
+  stroke-dasharray: 2100.767822265625px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.36s,
+    fill 0.4s ease-in-out 1.1s;
+  transition: stroke-dashoffset 3s ease 0.36s, fill 0.4s ease-in-out 1.1s;
+}
 
-  svg.active .paint-map-4 {
-    stroke-dashoffset: 4201.51025390625px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-4 {
+  stroke-dashoffset: 4201.53564453125px;
+  fill: rgb(230, 230, 230);
+}
 
-  svg .paint-map-5 {
-    stroke-dashoffset: 2100.755126953125px;
-    stroke-dasharray: 2100.755126953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2000000000000002s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2000000000000002s;
-  }
+svg .svg-elem-5 {
+  stroke-dashoffset: 4173.853515625px;
+  stroke-dasharray: 4173.853515625px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.48s,
+    fill 0.4s ease-in-out 1.2000000000000002s;
+  transition: stroke-dashoffset 3s ease 0.48s,
+    fill 0.4s ease-in-out 1.2000000000000002s;
+}
 
-  svg.active .paint-map-5 {
-    stroke-dashoffset: 4201.51025390625px;
-    fill: rgb(230, 230, 230);
-  }
+svg.active .svg-elem-5 {
+  stroke-dashoffset: 8347.70703125px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-6 {
-    stroke-dashoffset: 21302.01953125px;
-    stroke-dasharray: 21302.01953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s;
-  }
+svg .svg-elem-6 {
+  stroke-dashoffset: 4173.853515625px;
+  stroke-dasharray: 4173.853515625px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.6s, fill 0.4s ease-in-out 1.3s;
+  transition: stroke-dashoffset 3s ease 0.6s, fill 0.4s ease-in-out 1.3s;
+}
 
-  svg.active .paint-map-6 {
-    stroke-dashoffset: 42604.0390625px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-6 {
+  stroke-dashoffset: 8347.70703125px;
+  fill: rgb(225, 225, 225);
+}
 
-  svg .paint-map-7 {
-    stroke-dashoffset: 21302.01953125px;
-    stroke-dasharray: 21302.01953125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.4000000000000001s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.4000000000000001s;
-  }
+svg .svg-elem-7 {
+  stroke-dashoffset: 789.5315551757812px;
+  stroke-dasharray: 789.5315551757812px;
+  -webkit-transition: stroke-dashoffset 3s ease 0.72s,
+    fill 0.4s ease-in-out 1.4000000000000001s;
+  transition: stroke-dashoffset 3s ease 0.72s,
+    fill 0.4s ease-in-out 1.4000000000000001s;
+}
 
-  svg.active .paint-map-7 {
-    stroke-dashoffset: 42604.0390625px;
-    fill: rgb(217, 217, 217);
-  }
+svg.active .svg-elem-7 {
+  stroke-dashoffset: 1579.0631103515625px;
+}
 
-  svg .paint-map-8 {
-    stroke-dashoffset: 789.5292358398438px;
-    stroke-dasharray: 789.5292358398438px;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s;
-  }
+svg .svg-elem-8 {
+  stroke-dashoffset: 113.45868080112012px;
+  stroke-dasharray: 113.45868080112012px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.84s,
+    fill 0.4s ease-in-out 1.5s;
+  transition: stroke-dashoffset 3s ease 0.84s, fill 0.4s ease-in-out 1.5s;
+}
 
-  svg.active .paint-map-8 {
-    stroke-dashoffset: 1579.0584716796875px;
-  }
+svg.active .svg-elem-8 {
+  stroke-dashoffset: 226.91736160224025px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-9 {
-    stroke-dashoffset: 113.45868080112012px;
-    stroke-dasharray: 113.45868080112012px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s;
-  }
+svg .svg-elem-9 {
+  stroke-dashoffset: 113.45868080112012px;
+  stroke-dasharray: 113.45868080112012px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 0.96s,
+    fill 0.4s ease-in-out 1.6s;
+  transition: stroke-dashoffset 3s ease 0.96s, fill 0.4s ease-in-out 1.6s;
+}
 
-  svg.active .paint-map-9 {
-    stroke-dashoffset: 226.91736160224025px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-9 {
+  stroke-dashoffset: 226.91736160224025px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-10 {
-    stroke-dashoffset: 113.45868080112012px;
-    stroke-dasharray: 113.45868080112012px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7000000000000002s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7000000000000002s;
-  }
+svg .svg-elem-10 {
+  stroke-dashoffset: 113.45868080112012px;
+  stroke-dasharray: 113.45868080112012px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.08s,
+    fill 0.4s ease-in-out 1.7000000000000002s;
+  transition: stroke-dashoffset 3s ease 1.08s,
+    fill 0.4s ease-in-out 1.7000000000000002s;
+}
 
-  svg.active .paint-map-10 {
-    stroke-dashoffset: 226.91736160224025px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-10 {
+  stroke-dashoffset: 226.91736160224025px;
+  fill: rgb(255, 255, 255);
+}
 
-  svg .paint-map-11 {
-    stroke-dashoffset: 113.45868080112012px;
-    stroke-dasharray: 113.45868080112012px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s;
-  }
+svg .svg-elem-11 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.2s, fill 0.4s ease-in-out 1.8s;
+  transition: stroke-dashoffset 3s ease 1.2s, fill 0.4s ease-in-out 1.8s;
+}
 
-  svg.active .paint-map-11 {
-    stroke-dashoffset: 226.91736160224025px;
-    fill: rgb(255, 255, 255);
-  }
+svg.active .svg-elem-11 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-12 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3199999999999998s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9000000000000001s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3199999999999998s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9000000000000001s;
-  }
+svg .svg-elem-12 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.3199999999999998s,
+    fill 0.4s ease-in-out 1.9000000000000001s;
+  transition: stroke-dashoffset 3s ease 1.3199999999999998s,
+    fill 0.4s ease-in-out 1.9000000000000001s;
+}
 
-  svg.active .paint-map-12 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-12 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-13 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.44s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.44s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2s;
-  }
+svg .svg-elem-13 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.44s, fill 0.4s ease-in-out 2s;
+  transition: stroke-dashoffset 3s ease 1.44s, fill 0.4s ease-in-out 2s;
+}
 
-  svg.active .paint-map-13 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-13 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-14 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.56s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.56s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s;
-  }
+svg .svg-elem-14 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.56s,
+    fill 0.4s ease-in-out 2.1s;
+  transition: stroke-dashoffset 3s ease 1.56s, fill 0.4s ease-in-out 2.1s;
+}
 
-  svg.active .paint-map-14 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-14 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-15 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.68s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.2s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.68s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.2s;
-  }
+svg .svg-elem-15 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.68s,
+    fill 0.4s ease-in-out 2.2s;
+  transition: stroke-dashoffset 3s ease 1.68s, fill 0.4s ease-in-out 2.2s;
+}
 
-  svg.active .paint-map-15 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-15 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-16 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7999999999999998s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.3s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7999999999999998s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.3s;
-  }
+svg .svg-elem-16 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.7999999999999998s,
+    fill 0.4s ease-in-out 2.3s;
+  transition: stroke-dashoffset 3s ease 1.7999999999999998s,
+    fill 0.4s ease-in-out 2.3s;
+}
 
-  svg.active .paint-map-16 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-16 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-17 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.92s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4000000000000004s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.92s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4000000000000004s;
-  }
+svg .svg-elem-17 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 1.92s,
+    fill 0.4s ease-in-out 2.4000000000000004s;
+  transition: stroke-dashoffset 3s ease 1.92s,
+    fill 0.4s ease-in-out 2.4000000000000004s;
+}
 
-  svg.active .paint-map-17 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-17 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-18 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.04s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.04s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s;
-  }
+svg .svg-elem-18 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.04s,
+    fill 0.4s ease-in-out 2.5s;
+  transition: stroke-dashoffset 3s ease 2.04s, fill 0.4s ease-in-out 2.5s;
+}
 
-  svg.active .paint-map-18 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-18 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-19 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.16s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.16s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6s;
-  }
+svg .svg-elem-19 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.16s,
+    fill 0.4s ease-in-out 2.6s;
+  transition: stroke-dashoffset 3s ease 2.16s, fill 0.4s ease-in-out 2.6s;
+}
 
-  svg.active .paint-map-19 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-19 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-20 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.28s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.7s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.28s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.7s;
-  }
+svg .svg-elem-20 {
+  stroke-dashoffset: 39.152914544324396px;
+  stroke-dasharray: 39.152914544324396px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.28s,
+    fill 0.4s ease-in-out 2.7s;
+  transition: stroke-dashoffset 3s ease 2.28s, fill 0.4s ease-in-out 2.7s;
+}
 
-  svg.active .paint-map-20 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-20 {
+  stroke-dashoffset: 78.30582908864879px;
+  fill: rgb(243, 47, 47);
+}
 
-  svg .paint-map-21 {
-    stroke-dashoffset: 39.152914544324396px;
-    stroke-dasharray: 39.152914544324396px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.8s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.8s;
-  }
+svg .svg-elem-21 {
+  stroke-dashoffset: 469.2404479980469px;
+  stroke-dasharray: 469.2404479980469px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.4s, fill 0.4s ease-in-out 2.8s;
+  transition: stroke-dashoffset 3s ease 2.4s, fill 0.4s ease-in-out 2.8s;
+}
 
-  svg.active .paint-map-21 {
-    stroke-dashoffset: 78.30582908864879px;
-    fill: rgb(243, 47, 47);
-  }
+svg.active .svg-elem-21 {
+  stroke-dashoffset: 938.4808959960938px;
+  fill: rgb(0, 0, 0);
+}
 
-  svg .paint-map-22 {
-    stroke-dashoffset: 469.2480773925781px;
-    stroke-dasharray: 469.2480773925781px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.52s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.9000000000000004s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.52s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.9000000000000004s;
-  }
+svg .svg-elem-22 {
+  stroke-dashoffset: 740.655029296875px;
+  stroke-dasharray: 740.655029296875px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.52s,
+    fill 0.4s ease-in-out 2.9000000000000004s;
+  transition: stroke-dashoffset 3s ease 2.52s,
+    fill 0.4s ease-in-out 2.9000000000000004s;
+}
 
-  svg.active .paint-map-22 {
-    stroke-dashoffset: 938.4961547851562px;
-    fill: rgb(0, 0, 0);
-  }
+svg.active .svg-elem-22 {
+  stroke-dashoffset: 1481.31005859375px;
+  fill: rgb(0, 0, 0);
+}
 
-  svg .paint-map-23 {
-    stroke-dashoffset: 740.6456298828125px;
-    stroke-dasharray: 740.6456298828125px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6399999999999997s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6399999999999997s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3s;
-  }
+svg .svg-elem-23 {
+  stroke-dashoffset: 485.6320495605469px;
+  stroke-dasharray: 485.6320495605469px;
+  fill: transparent;
+  -webkit-transition: stroke-dashoffset 3s ease 2.6399999999999997s,
+    fill 0.4s ease-in-out 3s;
+  transition: stroke-dashoffset 3s ease 2.6399999999999997s,
+    fill 0.4s ease-in-out 3s;
+}
 
-  svg.active .paint-map-23 {
-    stroke-dashoffset: 1481.291259765625px;
-    fill: rgb(0, 0, 0);
-  }
-
-  svg .paint-map-24 {
-    stroke-dashoffset: 485.6286926269531px;
-    stroke-dasharray: 485.6286926269531px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.76s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.1000000000000005s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.76s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.1000000000000005s;
-  }
-
-  svg.active .paint-map-24 {
-    stroke-dashoffset: 971.2573852539062px;
-    fill: rgb(0, 0, 0);
-  }
-
-  svg .paint-map-25 {
-    stroke-dashoffset: 5242px;
-    stroke-dasharray: 5242px;
-    fill: transparent;
-    -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.88s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.2s;
-    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.88s,
-      fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.2s;
-  }
-
-  svg.active .paint-map-25 {
-    stroke-dashoffset: 10484px;
-    fill: rgb(255, 255, 255);
-  }
-
+svg.active .svg-elem-23 {
+  stroke-dashoffset: 971.2640991210938px;
+  fill: rgb(0, 0, 0);
 }
 
 .painting-map {
@@ -2085,5 +2071,75 @@ section.contacts-section {
     height: 100%;
     object-fit: cover;
     object-position: right;
+  }
+}
+
+section.image-block {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.image-block__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  &.low {
+    .image-block__text {
+      max-width: 410px;
+    }
+    .image_wrapper {
+      box-shadow: 10px 10px 0px 0px $brand-red;
+    }
+  }
+}
+
+.image-block__text {
+  flex: 1 0 calc(40% - 30px);
+}
+
+.image-block__img {
+  flex: 0 0 calc(60% - 30px);
+
+  .image_container {
+    height: 0;
+    position: relative;
+    padding-top: 64%;
+  }
+
+  .image_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 10px 10px 0px 0px $brand-blue;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.combo-section.galery {
+  .combo-section__slider-wrapper .slide-item:before {
+    display: none;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .galery-slide__footer {
+    padding: 10px;
+    background-color: $brand-blue;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
