@@ -1826,7 +1826,6 @@ section:not(:first-child) {
 }
 
 .contacts-block {
-  margin-top: 60px;
   max-width: 520px;
   background-color: #1e2023;
   padding: 60px;
@@ -2687,6 +2686,10 @@ section.image-block {
   padding-bottom: 150px;
 }
 
+section.image-block.white {
+  background-color: #fff;
+}
+
 .image-block__wrapper {
   display: flex;
   align-items: center;
@@ -2732,6 +2735,10 @@ section.image-block {
   object-fit: cover;
 }
 
+.combo-section.galery {
+  background-color: #f9f9f9;
+}
+
 .combo-section.galery .combo-section__slider-wrapper .slide-item:before {
   display: none;
 }
@@ -2750,6 +2757,99 @@ section.image-block {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+section.vacancies {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #fff;
+}
+
+section.vacancies .vacancies__lists {
+  position: relative;
+}
+
+section.vacancies .vacancies__list {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 30px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+section.vacancies .vacancies__list.show {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+}
+
+section.vacancies .list-item {
+  flex: 1 0 calc(33.33% - 30px);
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+section.vacancies .list-item__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1E2023;
+  line-height: 140%;
+}
+
+section.vacancies .dotted-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+section.vacancies .dotted-item::before {
+  margin-top: 8px;
+  margin-right: 10px;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #59677e;
+  border-radius: 50%;
+}
+
+section.vacancies .list-item__info {
+  padding: 30px 0;
+}
+
+section.vacancies .redBtn {
+  background-color: transparent;
+  border-color: #F32F2F;
+  color: #F32F2F;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.vacancies__tabs {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.vacancies__tabs .tabs__btn {
+  cursor: pointer;
+  margin-right: 16px;
+  padding: 8px 16px;
+  border: 2px solid #F32F2F;
+  border-radius: 4px;
+  color: #F32F2F;
+}
+
+.vacancies__tabs .tabs__btn.active {
+  background-color: #F32F2F;
+  color: #fff;
 }
 
 @media (max-width: 1455px) {

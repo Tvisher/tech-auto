@@ -207,3 +207,17 @@ if (paintingMap) {
         }
     }
 }
+
+
+document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.closest('[data-tab-switch]')) {
+        const tabBtn = target.closest('[data-tab-switch]');
+        const tabId = tabBtn.dataset.tabSwitch;
+        document.querySelector('[data-tab-switch].active').classList.remove('active');
+        tabBtn.classList.add('active');
+        document.querySelector('[data-tab-switch-content].show').classList.remove('show');
+
+        document.querySelector(`[data-tab-switch-content='${tabId}']`).classList.add('show');
+    }
+})

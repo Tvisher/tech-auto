@@ -879,7 +879,6 @@ section {
 }
 
 .contacts-block {
-  margin-top: 60px;
   max-width: 520px;
   background-color: #1e2023;
   padding: 60px;
@@ -2077,6 +2076,9 @@ svg.active .svg-elem-23 {
 section.image-block {
   padding-top: 150px;
   padding-bottom: 150px;
+  &.white {
+    background-color: #fff;
+  }
 }
 
 .image-block__wrapper {
@@ -2125,6 +2127,7 @@ section.image-block {
 }
 
 .combo-section.galery {
+  background-color: #f9f9f9;
   .combo-section__slider-wrapper .slide-item:before {
     display: none;
   }
@@ -2141,5 +2144,87 @@ section.image-block {
     bottom: 0;
     left: 0;
     width: 100%;
+  }
+}
+
+section.vacancies {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #fff;
+  .vacancies__lists {
+    position: relative;
+  }
+  .vacancies__list {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 30px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    &.show {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .list-item {
+    flex: 1 0 calc(33.33% - 30px);
+    padding: 30px;
+    background-color: #f9f9f9;
+  }
+  .list-item__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: $brand-black;
+    line-height: 140%;
+  }
+  .dotted-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    &::before {
+      margin-top: 8px;
+      margin-right: 10px;
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: #59677e;
+      border-radius: 50%;
+    }
+  }
+  .list-item__info {
+    padding: 30px 0;
+  }
+  .redBtn {
+    background-color: transparent;
+    border-color: $brand-red;
+    color: $brand-red;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.vacancies__tabs {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  .tabs__btn {
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 8px 16px;
+    border: 2px solid $brand-red;
+    border-radius: 4px;
+    color: $brand-red;
+    &.active {
+      background-color: $brand-red;
+      color: #fff;
+    }
   }
 }
