@@ -976,7 +976,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
   font-family: "OpenSans";
   font-size: 18px;
   font-weight: 400;
@@ -2105,18 +2104,14 @@ section.our-mission .our-mission__title {
   color: #1E2023;
 }
 
-section.our-mission .our-mission__descr {
-  max-width: 850px;
-  font-size: 18px;
-  margin: auto;
-  font-style: italic;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+section.our-mission .our-mission__wrapper {
   position: relative;
+  max-width: 850px;
+  margin: auto;
 }
 
-section.our-mission .our-mission__descr::before,
-section.our-mission .our-mission__descr::after {
+section.our-mission .our-mission__wrapper::before,
+section.our-mission .our-mission__wrapper::after {
   width: 140px;
   position: absolute;
   top: 0;
@@ -2128,14 +2123,23 @@ section.our-mission .our-mission__descr::after {
   background-size: contain;
 }
 
-section.our-mission .our-mission__descr::before {
+section.our-mission .our-mission__wrapper::before {
   left: -80px;
   transform: translate3d(-100%, -100%, 0);
 }
 
-section.our-mission .our-mission__descr::after {
+section.our-mission .our-mission__wrapper::after {
+  top: inherit;
+  bottom: 0;
   right: -80px;
   transform: translate3d(100%, 0, 0) scale3d(-1, -1, 1);
+}
+
+section.our-mission .our-mission__descr {
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 section.our-mission .our-mission__bold-text {
@@ -2152,7 +2156,7 @@ section.combo-section {
 }
 
 .combo-section__nav {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .combo-section__wrapper {
@@ -2676,11 +2680,12 @@ svg.active .svg-elem-23 {
   width: 100%;
 }
 
-.painting-map__wrapper svg {
+.painting-map-element {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right;
+  margin-left: auto;
 }
 
 section.image-block {
@@ -2834,15 +2839,16 @@ section.vacancies .redBtn {
 }
 
 .vacancies__tabs {
+  flex-wrap: wrap;
   margin-bottom: 35px;
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  gap: 16px;
 }
 
 .vacancies__tabs .tabs__btn {
   cursor: pointer;
-  margin-right: 16px;
   padding: 8px 16px;
   border: 2px solid #F32F2F;
   border-radius: 4px;
@@ -2857,6 +2863,42 @@ section.vacancies .redBtn {
 @media (max-width: 1455px) {
   .scroll-action {
     display: none;
+  }
+}
+
+@media (max-width: 1320px) {
+  section.our-mission {
+    padding: 200px 0 !important;
+  }
+
+  section.our-mission .our-mission__wrapper::after {
+    right: 140px;
+    top: inherit;
+    bottom: -50px;
+    transform: translate3d(100%, 100%, 0) scale3d(-1, -1, 1);
+  }
+
+  section.our-mission .our-mission__wrapper::before {
+    left: 140px;
+    top: -50px;
+    transform: translate3d(-100%, -100%, 0);
+  }
+}
+
+@media (max-width: 1124px) {
+  .painting-map__wrapper {
+    height: auto;
+  }
+
+  .painting-map__content {
+    position: static;
+  }
+
+  .painting-map__inner {
+    max-width: inherit;
+    transform: none;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
 }
 
@@ -2980,9 +3022,71 @@ section.vacancies .redBtn {
   .services__list .list-item.form-item {
     order: 100;
   }
+
+  .about-section__wrapper .about-section__img::before {
+    display: none;
+  }
+
+  .about-section__wrapper .about-section__img {
+    display: none;
+  }
+
+  .about-section__content {
+    padding-left: 0;
+  }
+
+  .about-section {
+    padding-bottom: 50px;
+  }
+
+  section.clients,
+  section.image-block,
+  .advantages.no-rotate,
+  section.contacts-section,
+  .map-bg.full .advantages,
+  section.combo-section,
+  section.vacancies {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .clients__wrapper {
+    flex-direction: column;
+  }
+
+  .clients__wrapper .clients__blocks-list .list-item {
+    flex: 1 0 calc(33.33% - 30px);
+  }
+
+  .contacts-section__wrapper {
+    flex-direction: column;
+  }
+
+  .contacts-section__form {
+    padding-left: 0px;
+    padding-top: 30px;
+    border-top: 1px solid #f32f2f;
+    border-left: 0;
+  }
+
+  section.our-mission .our-mission__title {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 768px) {
+  .image-block__wrapper {
+    flex-direction: column;
+  }
+
+  .image-block__wrapper.low .image-block__text {
+    max-width: inherit;
+  }
+
+  .image-block__img {
+    width: 100%;
+  }
+
   .advantages__list {
     flex-direction: column;
   }
@@ -3151,6 +3255,75 @@ section.vacancies .redBtn {
 
   .services__list .list-item.form-item .form-btn {
     width: 100%;
+  }
+
+  .clients__wrapper .clients__blocks-list .list-item {
+    flex: 1 0 calc(50% - 30px);
+  }
+
+  section.our-mission {
+    padding: 150px 0 !important;
+  }
+
+  section.our-mission .our-mission__title {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  section.our-mission .our-mission__wrapper::before,
+  section.our-mission .our-mission__wrapper::after {
+    width: 76px;
+    height: 60px;
+  }
+
+  .combo-section__wrapper {
+    flex-direction: column;
+    overflow: hidden;
+    display: block;
+  }
+
+  .combo-section__block {
+    margin-bottom: 30px;
+  }
+
+  section.our-mission .our-mission__wrapper::before {
+    left: 80px;
+  }
+
+  section.our-mission .our-mission__wrapper::after {
+    right: 80px;
+  }
+
+  .about-section__wrapper .about-section__img {
+    display: block;
+    transform: translate(-50%, -90%);
+    width: 90%;
+    left: 50%;
+  }
+
+  .about-section__wrapper .about-section__img img {
+    margin-top: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  .about-section {
+    padding-top: 250px;
+    padding-bottom: 0;
+  }
+
+  .about-section__wrapper {
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 30px;
+  }
+
+  .about-section__wrapper:before {
+    width: 323px;
+    height: 323px;
+    border-radius: 50%;
   }
 }
 

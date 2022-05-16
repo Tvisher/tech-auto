@@ -109,7 +109,7 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
 const comboSlider = new Swiper('.combo-section__slider', {
     modules: [EffectFade, Autoplay, Navigation],
     speed: 800,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     // loop: true,
     navigation: {
@@ -118,6 +118,14 @@ const comboSlider = new Swiper('.combo-section__slider', {
     },
     autoplay: {
         delay: 6000,
+    },
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
     },
     on: {
         resize(swiper) {
@@ -168,6 +176,7 @@ AOS.init({
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
+        e.preventDefault();
         target.closest('[data-burger-menu]').classList.toggle('active');
         document.querySelector('[data-mobile-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
