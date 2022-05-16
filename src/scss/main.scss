@@ -2205,6 +2205,7 @@ section.vacancies {
     align-items: flex-start;
     margin-bottom: 5px;
     &::before {
+      flex: 0 0 auto;
       margin-top: 8px;
       margin-right: 10px;
       content: "";
@@ -2386,5 +2387,8 @@ section.vacancies {
     width: 323px;
     height: 323px;
     border-radius: 50%;
+  }
+  section.vacancies .list-item {
+    padding: 15px;
   }
 }
