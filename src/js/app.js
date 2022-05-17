@@ -203,8 +203,6 @@ function headerFix(e) {
 }
 headerFix();
 
-
-
 // Отрисовка карты секции о нас
 const paintingMap = document.querySelector('.painting-map-element');
 if (paintingMap) {

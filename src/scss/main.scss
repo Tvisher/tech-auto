@@ -189,6 +189,36 @@ li {
     color: $brand-black;
     font-size: 14px;
     font-weight: 400;
+    position: relative;
+    &::before {
+      position: absolute;
+      right: 0;
+
+      bottom: 0;
+      height: 3px;
+      background-color: $brand-red;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+      content: "";
+    }
+    &::after {
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background-color: $brand-red;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+      content: "";
+    }
+    &:hover {
+      &::before {
+        width: 30%;
+      }
+      &::after {
+        width: 70%;
+      }
+    }
   }
 }
 
