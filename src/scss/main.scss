@@ -2425,3 +2425,52 @@ section.vacancies {
     padding: 15px;
   }
 }
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #fff;
+}
+.form-control {
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 0;
+}
+* {
+  outline: none !important;
+}
+.btn-check:focus + .btn,
+.btn:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-menu {
+  max-width: 500px;
+  width: 100%;
+  textarea {
+    resize: none;
+  }
+  label {
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    color: $brand-gray;
+    .required-star {
+      color: red;
+      font-size: 12px;
+    }
+  }
+  .offcanvas-title {
+    font-size: 32px;
+  }
+  .offcanvas-header {
+    flex-direction: column;
+  }
+  .offcanvas-title {
+    order: 2;
+    align-self: flex-start;
+  }
+  .btn-close {
+    align-self: flex-end;
+  }
+}

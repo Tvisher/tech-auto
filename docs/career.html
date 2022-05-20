@@ -13,8 +13,9 @@
     <link rel="preload" href="./fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css?_v=20220517143659" />
-    <link rel="stylesheet" href="./css/main.min.css?_v=20220517143659">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css?_v=20220520143215" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20220520143215" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.min.css?_v=20220520143215">
     <script> </script>
 </head>
 
@@ -533,8 +534,50 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js?_v=20220517143659"></script>
-<script src="./js/app.min.js?_v=20220517143659"></script>
+<!-- <button class="btn btn-primary" type="button" >Toggle right offcanvas</button> -->
+
+<div class="offcanvas offcanvas-end form-menu pt-4 p-1" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Оставить заявку</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <form class="offcanvas-body">
+        <div class="form-floating mb-3">
+            <p class="">Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nameInput" placeholder=" " required>
+            <label for="nameInput">Ваше имя <span class="required-star">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="phoneInput" placeholder=" " required>
+            <label for="phoneInput">Телефон <span class="required-star">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="emailInput" placeholder=" " required>
+            <label for="emailInput">Email <span class="required-star">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="servise" placeholder="" value="Какая то услуга" readonly="readonly">
+            <label for="servise">Интересующая услуга</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Сообщение</label>
+        </div>
+        <div class="form-floating mb-5">
+            тут будет капча
+        </div>
+
+        <button class="btn redBtn" type="submit">Отправить</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20220520143215" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js?_v=20220520143215"></script>
+<script src="./js/app.min.js?_v=20220520143215"></script>
 </body>
 
 </html>

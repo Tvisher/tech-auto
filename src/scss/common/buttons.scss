@@ -11,12 +11,8 @@
   cursor: pointer;
   border: 2px solid transparent;
   will-change: auto;
-  transition:
-    color .3s ease,
-    background-color .3s ease,
-    transform .3s ease,
-    border-color .3s ease;
-
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease,
+    border-color 0.3s ease;
 
   &:active {
     transform: translate3d(0, 2px, 0);
@@ -38,14 +34,11 @@
   color: #fff;
 }
 
-
-
 .ghostBtn {
   background-color: transparent;
   color: $brand-primary;
   border-color: $brand-primary;
 }
-
 
 button {
   cursor: pointer;

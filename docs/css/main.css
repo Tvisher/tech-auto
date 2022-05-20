@@ -3949,6 +3949,65 @@ section.vacancies .redBtn {
   color: #fff;
 }
 
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #fff;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 0;
+}
+
+* {
+  outline: none !important;
+}
+
+.btn-check:focus + .btn,
+.btn:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-menu {
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-menu textarea {
+  resize: none;
+}
+
+.form-menu label {
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  color: #59677E;
+}
+
+.form-menu label .required-star {
+  color: red;
+  font-size: 12px;
+}
+
+.form-menu .offcanvas-title {
+  font-size: 32px;
+}
+
+.form-menu .offcanvas-header {
+  flex-direction: column;
+}
+
+.form-menu .offcanvas-title {
+  order: 2;
+  align-self: flex-start;
+}
+
+.form-menu .btn-close {
+  align-self: flex-end;
+}
+
 @media (max-width: 1455px) {
   .scroll-action {
     display: none;
