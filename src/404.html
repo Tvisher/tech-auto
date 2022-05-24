@@ -1,0 +1,44 @@
+@@include('./html/header.html')
+<main class="mobile-padding">
+    <section>
+        <div class="container">
+            <div class="wrap__">
+                <div>
+                    <h4 class="large-title" style="margin-bottom: 20px;">Упс, такой страницы нет</h4>
+                    <span style="font-size: 24px;">Возможно ее никогда и небыло...</span>
+                    <p style="font-size: 14px; color:  #59677E;">Перейдите на главную страницу по кнопке ниже</p>
+                    <a style="margin-top: 60px;" href="index.html" class="btn redBtn">Главная странциа</a>
+                </div>
+                <div>
+                    <img src="@img/404.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<style>
+    body {
+        height: 100%;
+    }
+
+    main {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 100px 0 !important;
+    }
+
+    .wrap__ {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+</style>
+@@include('./html/footer.html')
