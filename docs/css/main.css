@@ -2885,6 +2885,7 @@ section:not(:first-child) {
 }
 
 .contacts-block .contacts-block__nameplate {
+  color: #59677e;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -3961,6 +3962,10 @@ section.vacancies .redBtn {
 
 .form-menu .btn-close {
   align-self: flex-end;
+}
+
+.hidden-galery-item {
+  display: none;
 }
 
 @media (max-width: 1455px) {

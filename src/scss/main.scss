@@ -927,6 +927,7 @@ section {
   }
 
   .contacts-block__nameplate {
+    color: #59677e;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 5px;
@@ -2473,4 +2474,8 @@ section.vacancies {
   .btn-close {
     align-self: flex-end;
   }
+}
+
+.hidden-galery-item {
+  display: none;
 }
