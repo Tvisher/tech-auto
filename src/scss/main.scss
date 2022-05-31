@@ -2216,7 +2216,7 @@ section.vacancies {
     position: absolute;
     left: 0;
     top: 0;
-    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    // transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
     &.show {
       position: static;
       visibility: visible;
@@ -2224,9 +2224,17 @@ section.vacancies {
     }
   }
   .list-item {
-    flex: 1 0 calc(33.33% - 30px);
+    flex: 0 0 calc(33.33% - 30px);
+    // max-width: calc(33.33% - 20px);
     padding: 30px;
     background-color: #f9f9f9;
+    @media (max-width: 992px) {
+      flex: 0 0 calc(50% - 30px);
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+    }
   }
   .list-item__title {
     font-size: 30px;
@@ -2477,5 +2485,9 @@ section.vacancies {
 }
 
 .hidden-galery-item {
+  display: none;
+}
+
+.swiper-button-lock ~ .slider-timer {
   display: none;
 }

@@ -3831,7 +3831,6 @@ section.vacancies .vacancies__list {
   position: absolute;
   left: 0;
   top: 0;
-  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 section.vacancies .vacancies__list.show {
@@ -3841,7 +3840,7 @@ section.vacancies .vacancies__list.show {
 }
 
 section.vacancies .list-item {
-  flex: 1 0 calc(33.33% - 30px);
+  flex: 0 0 calc(33.33% - 30px);
   padding: 30px;
   background-color: #f9f9f9;
 }
@@ -3965,6 +3964,10 @@ section.vacancies .redBtn {
 }
 
 .hidden-galery-item {
+  display: none;
+}
+
+.swiper-button-lock ~ .slider-timer {
   display: none;
 }
 
@@ -4135,6 +4138,10 @@ section.vacancies .redBtn {
     order: 100;
   }
 
+  section.vacancies .list-item {
+    flex: 0 0 calc(50% - 30px);
+  }
+
   .about-section__wrapper .about-section__img::before {
     display: none;
   }
@@ -4261,6 +4268,10 @@ section.vacancies .redBtn {
 
   .footer__nav-list a {
     padding-left: 0;
+  }
+
+  section.vacancies .list-item {
+    flex: 0 0 100%;
   }
 }
 
