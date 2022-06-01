@@ -2489,5 +2489,6 @@ section.vacancies {
 }
 
 .swiper-button-lock ~ .slider-timer {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }

@@ -3968,7 +3968,8 @@ section.vacancies .redBtn {
 }
 
 .swiper-button-lock ~ .slider-timer {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 1455px) {
