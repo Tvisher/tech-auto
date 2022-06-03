@@ -38,9 +38,9 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  // height: 100%;
   font-family: $mainFont;
   font-size: $mainFontSize;
+  font-style: normal;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2491,4 +2491,17 @@ section.vacancies {
 .swiper-button-lock ~ .slider-timer {
   opacity: 0;
   visibility: hidden;
+}
+
+.swiper-slide__content .slite-title,
+.swiper-slide__content .slide-descr,
+.large-title,
+.advantages__list .list-item__rotate,
+.services__list .list-item .middle-title,
+.contacts-block .contacts-block__title,
+.about-section__content .about-section__title,
+.about-section__content .about-section__descr,
+section.our-mission .our-mission__title,
+section.vacancies .list-item__title {
+  font-family: PTSerif;
 }
